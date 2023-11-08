@@ -1,6 +1,8 @@
 .home {
     text-align: center;
     padding: 20px;
+    margin: 10px;
+    background-color: bisque;
   }
   
   button {
@@ -20,3 +22,66 @@
     margin-top: 20px;
   }
   
+  .text-center {
+    background: linear-gradient(45deg, rgb(163, 163, 163), transparent);
+    height: 50px;
+    padding: 2px;
+    margin-left: 600px;
+    width: 300px;
+  }
+
+  .add-todo {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .counts {
+    display: flex;  
+    justify-content: space-evenly;  
+    align-items: center;  
+  }
+
+  .text-success-box {
+    color: rgb(240, 248, 255);
+    background-color: #0cceb1; 
+    border-radius: 10px; 
+    padding: 10px; 
+    display: inline-block; 
+    transition: all 0.3s; 
+  }
+
+  .text-success-box:hover {
+    color: black;
+    background-color: aqua;
+    transform: scale(1.1); 
+  }
+
+  .text-danger-box {
+    color: aliceblue;
+    background-color: #da0000; 
+    border-radius: 10px; 
+    padding: 10px; 
+    display: inline-block; 
+    transition: all 0.3s; 
+  }
+
+  .text-danger-box:hover {
+    color: black;
+    background-color: rgba(255, 114, 114, 0.793);
+    transform: scale(1.1); 
+  }
+
+  .total-box-count {
+    color: aliceblue;
+    background-color: #8e00da; 
+    border-radius: 10px; 
+    padding: 10px; 
+    display: inline-block; 
+    transition: all 0.3s; 
+  }
+
+  .total-box-count:hover {
+    color: black;
+    background-color: rgba(224, 114, 255, 0.793);
+    transform: scale(1.1); 
+  }

@@ -24,15 +24,16 @@ const TodoItem = ({ todo }) => {
   return (
     <div className="todo-item">
       {isEditing ? (
-        <div className="input-group">
+        <div className="input-group" style={{width: '100%', paddingLeft: '350px', paddingRight: '350px', marginBottom: '15px' }}>
           <input
             type="text"
             className="form-control"
             value={editedText}
             onChange={(e) => setEditedText(e.target.value)}
+            style={{marginRight: '5px', height: '40px'}}
           />
           <div className="input-group-append">
-            <button className="btn btn-success" onClick={handleSave}>
+            <button className="btn btn-success" onClick={handleSave} style={{marginRight: '5px'}}>
               Save
             </button>
             <button className="btn btn-secondary" onClick={handleCancel}>
@@ -41,9 +42,9 @@ const TodoItem = ({ todo }) => {
           </div>
         </div>
       ) : (
-        <div className="input-group">
+        <div className="input-group" style={{width: '100%', paddingLeft: '350px', paddingRight: '350px'}}>
           <div className="input-group-prepend">
-            <div className="input-group-text">
+            <div className="input-group-text" style={{margin: '5px'}}>
               <input
                 type="checkbox"
                 checked={todo.completed}
@@ -51,11 +52,11 @@ const TodoItem = ({ todo }) => {
               />
             </div>
           </div>
-          <p className={`form-control ${todo.completed ? 'completed' : ''}`}>
+          <p className={`form-control ${todo.completed ? 'completed' : ''}`} style={{ width: '50px', height: '40px' }}>
             {todo.text}
           </p>
           <div className="input-group-append">
-            <button className="btn btn-primary" onClick={handleEdit}>
+            <button className="btn btn-primary" onClick={handleEdit} style={{marginRight: '5px', marginLeft: '5px'}}>
               Edit
             </button>
             <button

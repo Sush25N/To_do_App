@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addTodo, toggleTodo, deleteTodo } from './redux/todoSlice';
 import TodoList from './components/TodoList';
+import './Home.css'
 
 const Home = () => {
   const todos = useSelector((state) => state.todos);
@@ -27,16 +28,16 @@ const Home = () => {
     <div className="home">
       <h1 className="text-center">Todo List</h1>
       <button
-        className="btn btn-primary"
+        className="btn btn-primary add-todo"
         onClick={() => addNewTodo('New Todo')}
       >
         Add Todo
       </button>
       <TodoList todos={todos} onToggle={handleToggle} onDelete={handleDelete} />
       <div className="counts">
-        <p className="text-success">Completed: {completedCount}</p>
-        <p className="text-danger">Uncompleted: {uncompletedCount}</p>
-        <p>Total: {totalCount}</p>
+        <p className="text-success-box">Completed: {completedCount}</p>
+        <p className="text-danger-box">Uncompleted: {uncompletedCount}</p>
+        <p className='total-box-count'>Total: {totalCount}</p>
       </div>
     </div>
   );
